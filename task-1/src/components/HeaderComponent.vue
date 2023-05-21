@@ -5,7 +5,7 @@
                 <span>Logo</span>
             </div>
             <div class="actions">
-                <button 
+                <button  
                     class="btn btn-primary"
                     @click="onModalOpen()"
                 >Sign Up</button>
