@@ -192,6 +192,7 @@ function resetGame() {
     }
 
     score = 0;
+    gameSpeed = 250;
 }
 
 // Поворот фигуры
@@ -251,7 +252,7 @@ document.addEventListener('keydown', function (event) {
     }
 });
 
-let gameSpeed = 400; // Задержка в миллисекундах между шагами игрового цикла
+let gameSpeed = 250; // Задержка в миллисекундах между шагами игрового цикла
 let lastTime = null;
 let isPaused = false; // Переменная для отслеживания статуса паузы
 const statusText = "Press P to pause"; // Текст статуса
@@ -262,16 +263,16 @@ const instructionText = "Use arrow keys to move"; // Текст инструкц
 function gameLoop() {
 
     // Ускорение игры
-    if (score >= 20) {
-        gameSpeed = 350;
-    } else if (score >= 40) {
-        gameSpeed = 300;
-    } else if (score >= 60) {
-        gameSpeed = 250;
-    } else if (score >= 80) {
+    if (score >= 10) {
         gameSpeed = 200;
-    } else if (score >= 120) {
-        gameSpeed = 160;
+    } else if (score >= 30) {
+        gameSpeed = 150;
+    } else if (score >= 50) {
+        gameSpeed = 100;
+    } else if (score >= 70) {
+        gameSpeed = 80;
+    } else if (score >= 90) {
+        gameSpeed = 50;
     }
 
 
