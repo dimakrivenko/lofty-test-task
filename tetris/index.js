@@ -268,6 +268,10 @@ function gameLoop() {
         gameSpeed = 300;
     } else if (score >= 60) {
         gameSpeed = 250;
+    } else if (score >= 80) {
+        gameSpeed = 200;
+    } else if (score >= 120) {
+        gameSpeed = 160;
     }
 
 
